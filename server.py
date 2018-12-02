@@ -10,10 +10,11 @@ def hello_world():
 
 @app.route('/nutrition')
 def nutrition():
-    description = request.args.get('description') or request.args.get('desciption')
+    description = request.args.get(
+        'description') or request.args.get('desciption')
 
     return {
-        "Loaded Fries queso monterey jack cheddar bacon green onions bbq ranch"jsonify({"sugar": "6 g", "carbohydrates": "95 g"}),
+        "Loaded Fries queso monterey jack cheddar bacon green onions bbq ranch": jsonify({"sugar": "6 g", "carbohydrates": "95 g"}),
         "Spinach Florentine Flatbread spinach artichoke hearts monterey jack parmesan romano tomatoes garlic fresh basil crushed red pepper oregano": jsonify({"sugar": "4 g", "carbohydrates": "51 g"}),
         "BBQ Chicken Flatbread chipotle chicken bbq sauce monterey jack cheddar cilantro red peppers red onions": jsonify({"sugar": "18 g", "carbohydrates": "66 g"}),
         "Crispy Brussels Sprouts lemon soy vinaigrette roasted onions croutons cotija cheese": jsonify({"sugar": "8 g", "carbohydrates": "38 g"}),
